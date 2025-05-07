@@ -1,6 +1,14 @@
 import React from "react";
 import { Button } from "./ui/button";
 import { ChevronRight } from "lucide-react";
+import Image from "next/image";
+
+const PartnerLogos = [
+  { name: "Bionix", path: "/images/partner1.png" },
+  { name: "Pakap", path: "/images/partner2.png" },
+  { name: "django", path: "/images/partner3.png" },
+  { name: "Strend", path: "/images/partner4.png" },
+];
 
 const Hero = () => {
   return (
@@ -21,6 +29,28 @@ const Hero = () => {
         <Button className="bg-[#181A1B]">
           <span>About Us</span> <ChevronRight />
         </Button>
+      </div>
+      <div style={{ position: "relative", width: "100%", height: "500px" }}>
+        <Image
+          src="/images/banner2.png"
+          fill
+          priority
+          className="object-contain"
+          alt="hero-mobile-image"
+        />
+      </div>
+      <p className="text-center">Trusted by world famous companies:</p>
+      <div className="flex flex-wrap gap-4 justify-center">
+        {PartnerLogos.map((logo) => (
+          <div key={logo.name} className="w-32 h-16 relative">
+            <Image
+              src={logo.path}
+              alt={logo.name}
+              fill
+              className="object-contain"
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -50,12 +50,12 @@ const Navlinks = [
 ];
 
 const Header = () => {
-  const [mounted, setMounted] = useState(false);
+  // const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-  if (!mounted) return null;
+  // useEffect(() => {
+  //   setMounted(true);
+  // }, []);
+  // if (!mounted) return null;
   return (
     <div className="h-[84px] py-3 px-4 flex items-center justify-between bg-transparent box-border">
       <Image
