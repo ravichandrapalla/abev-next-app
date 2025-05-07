@@ -1,15 +1,60 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
+
 import "./globals.css";
+import Header from "@/components/header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const beVietnamPro = localFont({
+  src: [
+    {
+      path: "./fonts/be-vietnam-pro/be-vietnam-pro-latin-100-normal.woff2",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "./fonts/be-vietnam-pro/be-vietnam-pro-latin-200-normal.woff2",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "./fonts/be-vietnam-pro/be-vietnam-pro-latin-300-normal.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./fonts/be-vietnam-pro/be-vietnam-pro-latin-400-normal.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/be-vietnam-pro/be-vietnam-pro-latin-500-normal.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./fonts/be-vietnam-pro/be-vietnam-pro-latin-600-normal.woff2",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "./fonts/be-vietnam-pro/be-vietnam-pro-latin-700-normal.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "./fonts/be-vietnam-pro/be-vietnam-pro-latin-800-normal.woff2",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "./fonts/be-vietnam-pro/be-vietnam-pro-latin-900-normal.woff2",
+      weight: "900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-be-vietnam",
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -23,10 +68,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${beVietnamPro.variable} font-sans antialiased`}>
+        <Header />
         {children}
       </body>
     </html>
