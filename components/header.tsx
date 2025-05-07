@@ -78,14 +78,14 @@ const Header = () => {
         </ul>
       </nav>
       <div className="flex flex-1 items-center justify-end">
-        <Button className="text-[10px] py-1.25 px-2.5 flex items-center  bg-[#CC003E] hover:bg-blue-900 transition-colors duration-600 ease-in">
+        <Button className="text-[10px] py-0 flex items-center h-7  bg-[#FF004D] hover:bg-blue-900 transition-colors duration-600 ease-in rounded-sm">
           <span>Download now</span>
           <div className="hidden">
             <ChevronRight />
           </div>
         </Button>
         <div className="ml-4 md:hidden">
-          <AlignJustify size={35} />
+          <AlignJustify size={35} color="#333333" />
         </div>
       </div>
     </div>
