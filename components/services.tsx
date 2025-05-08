@@ -4,21 +4,43 @@ import { Button } from "./ui/button";
 import { ChevronRight } from "lucide-react";
 
 const PaymentFeatures = [
-  { feature: "Verification for 1 business day" },
-  { feature: "No setup fee, no hidden fees" },
-  { feature: "Transparant payments details" },
+  {
+    headerTitle: "Send & Receive Payments",
+    headerName: "Online payments for any business setup",
+    features: [
+      {
+        feature: "Verification for 1 business day",
+        imgPath: "/icons/tick.png",
+      },
+      { feature: "No setup fee, no hidden fees", imgPath: "/icons/tick.png" },
+      { feature: "Transparant payments details", imgPath: "/icons/tick.png" },
+    ],
+    overViewImgPath: ["/images/overview3.png", "/images/overview4.png"],
+  },
+  {
+    headerTitle: "Minimal Dashboard",
+    headerName: "The world's most powerful & easy-to-use",
+    features: [
+      {
+        feature: "Fastest way to integrate payments",
+        imgPath: "/icons/tick.png",
+      },
+      { feature: "Get instant notifications", imgPath: "/icons/tick.png" },
+      {
+        feature: "Support assistance with integration",
+        imgPath: "/icons/tick.png",
+      },
+    ],
+    overViewImgPath: ["/images/overview5.png", "/images/overview6.png"],
+  },
 ];
 
 const Services = () => {
-  return (
-    <div className="mt-6 flex flex-col space-y-3 p-3">
-      <p className="text-[#3DE7FF] text-sm font-semibold">
-        Send & Receive Payments
-      </p>
-      <p className="font-bold text-2xl">
-        Online payments for any business setup
-      </p>
-      {PaymentFeatures.map((feature) => {
+  return PaymentFeatures.map((item) => (
+    <div key={item.headerName} className="mt-6 flex flex-col space-y-3 p-3">
+      <p className="text-[#3DE7FF] text-sm font-semibold">{item.headerTitle}</p>
+      <p className="font-bold text-2xl">{item.headerName}</p>
+      {item.features.map((feature) => {
         return (
           <div
             key={feature.feature}
@@ -26,7 +48,7 @@ const Services = () => {
           >
             <Image
               alt="correct-icon"
-              src="/icons/tick.png"
+              src={feature.imgPath}
               width={25}
               height={25}
             />
@@ -39,24 +61,13 @@ const Services = () => {
           <p>Get Started Now</p> <ChevronRight />
         </Button>
       </div>
-      <div className="p-2 h-[240px] overflow-hidden">
-        <Image
-          alt="overview-1"
-          src="/images/overview3.png"
-          width={500}
-          height={50}
-        />
-      </div>
-      <div className="p-2 h-[240px] overflow-hidden">
-        <Image
-          alt="overview-1"
-          src="/images/overview4.png"
-          width={500}
-          height={50}
-        />
-      </div>
+      {item.overViewImgPath.map((i) => (
+        <div key={i} className="p-2  overflow-hidden">
+          <Image alt="overview-1" src={i} width={500} height={50} />
+        </div>
+      ))}
     </div>
-  );
+  ));
 };
 
 export default Services;
