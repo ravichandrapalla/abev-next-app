@@ -13,18 +13,34 @@ const PartnerLogos = [
 const Hero = () => {
   return (
     <div className="flex flex-col space-y-3 px-5 font-sans mt-3.5 border-b-1 border-b-gray-300">
-      <p className="text-[#FF004D] text-xs font-semibold">
+      <p
+        data-aos="fade-up"
+        data-aos-duration="600"
+        className="text-[#FF004D] text-xs font-semibold"
+      >
         #Get your 7 days free trail
       </p>
-      <p className="text-3xl font-bold text-[#1D2B53]">
+      <p
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        className="text-3xl font-bold text-[#1D2B53]"
+      >
         Using your phone to payment & transfer money with Abev
       </p>
-      <p className="text-[#616B7E] text-sm font-medium line leading-6 pt-1">
+      <p
+        data-aos="fade-up"
+        data-aos-duration="1400"
+        className="text-[#616B7E] text-sm font-medium line leading-6 pt-1"
+      >
         Velit hendrerit sit auctor tempor sem. Congue mi tempor condimentum
         felis arcu, non cursus. Nulla pharetra porttitor sed platea arcu et leo
         odio.
       </p>
-      <div className="flex items-center justify-start space-x-4 pt-2">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1800"
+        className="flex items-center justify-start space-x-4 pt-2"
+      >
         <Button className="bg-[#00B3CC] p-4" size="lg">
           <p>Get Started Now</p> <ChevronRight />
         </Button>
@@ -32,7 +48,11 @@ const Hero = () => {
           <span>About Us</span> <ChevronRight />
         </Button>
       </div>
-      <div className="relative w-full h-[500px] app-banner-image">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="6000"
+        className="relative w-full h-[500px] app-banner-image"
+      >
         <Image
           src="/images/banner2.png"
           fill

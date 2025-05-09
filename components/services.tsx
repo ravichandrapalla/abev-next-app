@@ -11,9 +11,18 @@ const PaymentFeatures = [
       {
         feature: "Verification for 1 business day",
         imgPath: "/icons/tick.png",
+        delay: 600,
       },
-      { feature: "No setup fee, no hidden fees", imgPath: "/icons/tick.png" },
-      { feature: "Transparant payments details", imgPath: "/icons/tick.png" },
+      {
+        feature: "No setup fee, no hidden fees",
+        imgPath: "/icons/tick.png",
+        delay: 800,
+      },
+      {
+        feature: "Transparant payments details",
+        imgPath: "/icons/tick.png",
+        delay: 1000,
+      },
     ],
     overViewImgPath: ["/images/overview3.png", "/images/overview4.png"],
   },
@@ -24,11 +33,17 @@ const PaymentFeatures = [
       {
         feature: "Fastest way to integrate payments",
         imgPath: "/icons/tick.png",
+        delay: 600,
       },
-      { feature: "Get instant notifications", imgPath: "/icons/tick.png" },
+      {
+        feature: "Get instant notifications",
+        imgPath: "/icons/tick.png",
+        delay: 800,
+      },
       {
         feature: "Support assistance with integration",
         imgPath: "/icons/tick.png",
+        delay: 1000,
       },
     ],
     overViewImgPath: ["/images/overview5.png", "/images/overview6.png"],
@@ -45,6 +60,8 @@ const Services = () => {
           <div
             key={feature.feature}
             className="flex space-x-2 items-center justify-start"
+            data-aos="fade-up"
+            data-aos-duration={`${feature.delay}`}
           >
             <Image
               alt="correct-icon"
@@ -57,12 +74,22 @@ const Services = () => {
         );
       })}
       <div>
-        <Button className="bg-[#00B3CC] p-4" size="lg">
+        <Button
+          className="bg-[#00B3CC] p-4"
+          size="lg"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <p>Get Started Now</p> <ChevronRight />
         </Button>
       </div>
       {item.overViewImgPath.map((i) => (
-        <div key={i} className="p-2  overflow-hidden">
+        <div
+          key={i}
+          className="p-2  overflow-hidden"
+          data-aos="fade-down"
+          data-aos-duration="800"
+        >
           <Image alt="overview-1" src={i} width={500} height={50} />
         </div>
       ))}
