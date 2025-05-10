@@ -82,6 +82,13 @@
   .font-sans {
     font-family: var(--font-sans);
   }
+  .hover\:bg-custom-linear:hover {
+    background-image: linear-gradient(
+      180deg,
+      rgba(98, 236, 255, 0.21),
+      rgba(180, 246, 255, 0.074)
+    );
+  }
 }
 
 .dark {

@@ -21,16 +21,22 @@ const TestimonialsMock = [
         short: "I never really lost it to begin with",
         long: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna facilisi viverra felis eleifend ornare urna. Eu mauris, velit volutpat massa volutpat. Risus pellentesque felis nisl ut laoreet euismod vel, integer. Massa sodales lorem nisi, sed massa volutpat.",
         userBanner: "/images/user8.jpg",
+        userName: "Lora Joly",
+        userTitle: "Founder at Envato",
       },
       {
         short: "this is soo cool",
         long: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna facilisi viverra felis eleifend ornare urna. Eu mauris, velit volutpat massa volutpat. Risus pellentesque felis nisl ut laoreet euismod vel, integer. Massa sodales lorem nisi, sed massa volutpat.",
         userBanner: "/images/user9.jpg",
+        userName: "Alex Rivera",
+        userTitle: "CTO at Techify",
       },
       {
         short: "fantastic product",
         long: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna facilisi viverra felis eleifend ornare urna. Eu mauris, velit volutpat massa volutpat. Risus pellentesque felis nisl ut laoreet euismod vel, integer. Massa sodales lorem nisi, sed massa volutpat.",
         userBanner: "/images/user10.jpg",
+        userName: "Priya Das",
+        userTitle: "Product Lead at Nova",
       },
     ],
   },
@@ -96,8 +102,29 @@ const Testimonials = () => {
             <CarouselItem key={index} className="pt-4">
               <div className="text-start bg-white rounded-lg">
                 <div>
+                  <div>
+                    <Image
+                      alt="quotes"
+                      src="/icons/quoted-passage.png"
+                      height={35}
+                      width={35}
+                    />
+                  </div>
                   <p className="p-2 text-[15px] text-[#1D2B53] font-bold">{`"${item.short}."`}</p>
-                  <p className="p-2 text-gray-600">{item.long}</p>
+                  <p className="p-2 text-gray-600 tracking-wide leading-relaxed">
+                    {item.long}
+                  </p>
+                  <div className="w-[42%] pl-2 pt-2 text-end mt-3">
+                    <div className="flex items-center justify-start space-x-3">
+                      <div className="w-[20px] h-[2px] bg-[#00B3CC]"></div>
+                      <p className="font-bold text-[#1D2B53] text-[15px] tracking-wide">
+                        Lora Joly
+                      </p>
+                    </div>
+                    <p className="text-[14px] text-[#616B7E] font-medium mt-1">
+                      Founder at Evanto
+                    </p>
+                  </div>
                 </div>
 
                 <div className="relative h-70 m-2">
