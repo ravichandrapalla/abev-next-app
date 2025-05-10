@@ -52,27 +52,36 @@ const PaymentFeatures = [
 
 const Services = () => {
   return PaymentFeatures.map((item) => (
-    <div key={item.headerName} className="mt-6 flex flex-col space-y-3 p-3">
-      <p className="text-[#3DE7FF] text-sm font-semibold">{item.headerTitle}</p>
-      <p className="font-bold text-2xl">{item.headerName}</p>
-      {item.features.map((feature) => {
-        return (
-          <div
-            key={feature.feature}
-            className="flex space-x-2 items-center justify-start"
-            data-aos="fade-up"
-            data-aos-duration={`${feature.delay}`}
-          >
-            <Image
-              alt="correct-icon"
-              src={feature.imgPath}
-              width={25}
-              height={25}
-            />
-            <p className="font-medium">{feature.feature}</p>
-          </div>
-        );
-      })}
+    <div
+      key={item.headerName}
+      className="mt-8 flex flex-col space-y-3 p-3 pt-15 border-t-1 border-gray-200"
+    >
+      <p className="text-[#00B3CC] text-[13px] font-semibold">
+        {item.headerTitle}
+      </p>
+      <p className="font-bold text-2xl text-[#1D2B53]">{item.headerName}</p>
+      <div className="mb-5">
+        {item.features.map((feature) => {
+          return (
+            <div
+              key={feature.feature}
+              className="flex space-x-2 items-center justify-start mt-4"
+              data-aos="fade-up"
+              data-aos-duration={`${feature.delay}`}
+            >
+              <Image
+                alt="correct-icon"
+                src={feature.imgPath}
+                width={25}
+                height={25}
+                color="red"
+              />
+              <p className="font-medium text-[#1D2B53]">{feature.feature}</p>
+            </div>
+          );
+        })}
+      </div>
+
       <div>
         <Button
           className="bg-[#00B3CC] p-4"

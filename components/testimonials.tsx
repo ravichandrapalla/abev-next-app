@@ -64,7 +64,7 @@ const Testimonials = () => {
 
     const autoplayInterval = setInterval(() => {
       api.scrollNext();
-    }, 5000); // Change slide every 5 seconds
+    }, 1000); // Change slide every 5 seconds
 
     return () => clearInterval(autoplayInterval);
   }, [api]);
@@ -80,17 +80,26 @@ const Testimonials = () => {
   );
 
   return (
-    <div className="flex flex-col space-y-4 px-2 text-center mt-15 mb-15">
-      <p>{testimonials.headerTitle}</p>
-      <p className="text-xl font-bold">{testimonials.headerName}</p>
+    <div className="flex flex-col space-y-4 px-2 text-center mt-15 mb-15 ">
+      <div className="w-[80%] m-auto pb-8">
+        <p className="text-[#00B3CC] text-[13px] font-bold tracking-wide pb-2">
+          {testimonials.headerTitle}
+        </p>
+        <p className="text-2xl font-bold text-[#1D2B53]">
+          {testimonials.headerName}
+        </p>
+      </div>
 
-      <Carousel setApi={setApi} className="w-full max-w-4xl mx-auto">
+      <Carousel setApi={setApi} className="w-full  mx-auto ">
         <CarouselContent>
           {testimonials.quotes.map((item, index) => (
             <CarouselItem key={index} className="pt-4">
-              <div className="text-start bg-white rounded-lg shadow">
-                <p className="p-2 text-lg font-medium">{`"${item.short}."`}</p>
-                <p className="p-2 text-gray-600">{item.long}</p>
+              <div className="text-start bg-white rounded-lg">
+                <div>
+                  <p className="p-2 text-[15px] text-[#1D2B53] font-bold">{`"${item.short}."`}</p>
+                  <p className="p-2 text-gray-600">{item.long}</p>
+                </div>
+
                 <div className="relative h-70 m-2">
                   <Image
                     src={item.userBanner}
@@ -109,14 +118,14 @@ const Testimonials = () => {
       </Carousel>
 
       {/* Indicators */}
-      <div className="flex justify-center gap-2">
+      <div className="flex justify-center gap-3">
         {Array.from({ length: totalSlides }).map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-2xl transition-all ${
+            className={`w-[10px] h-[10px] outline-1 -outline-offset-[-2px] rounded-2xl transition-all ${
               currentIndex === index ? "bg-blue-600" : "bg-gray-300"
-            }`}
+            } `}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}

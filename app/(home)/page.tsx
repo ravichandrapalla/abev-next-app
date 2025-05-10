@@ -14,7 +14,7 @@ export default function Home() {
     AOS.init({ duration: 1000 });
   }, []);
   return (
-    <div className="flex flex-col pt-8">
+    <div className="flex flex-col pt-8 bg-[#fff]">
       <Hero />
       <Services />
       <FeaturesComponent />

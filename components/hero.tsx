@@ -12,13 +12,13 @@ const PartnerLogos = [
 
 const Hero = () => {
   return (
-    <div className="flex flex-col space-y-3 px-5 font-sans mt-3.5 border-b-1 border-b-gray-300">
+    <div className="flex flex-col space-y-3 px-5 font-sans mt-3.5 ">
       <p
         data-aos="fade-up"
         data-aos-duration="600"
-        className="text-[#FF004D] text-xs font-semibold"
+        className="text-[#FF004D] text-xs font-semibold text-[13px] tracking-wider"
       >
-        #Get your 7 days free trail
+        #Get your 7 days free trial
       </p>
       <p
         data-aos="fade-up"
@@ -30,7 +30,7 @@ const Hero = () => {
       <p
         data-aos="fade-up"
         data-aos-duration="1400"
-        className="text-[#616B7E] text-sm font-medium line leading-6 pt-1"
+        className="text-[#616B7E] text-sm font-medium line leading-6 pt-1 tracking-wide"
       >
         Velit hendrerit sit auctor tempor sem. Congue mi tempor condimentum
         felis arcu, non cursus. Nulla pharetra porttitor sed platea arcu et leo
@@ -61,7 +61,7 @@ const Hero = () => {
           alt="hero-mobile-image"
         />
       </div>
-      <p className="text-center text-[#1D2B53] text-sm font-medium">
+      <p className="text-center text-[#1D2B53] text-sm font-medium tracking-wide">
         Trusted by world famous companies:
       </p>
       <div className="flex flex-wrap justify-between p-2">

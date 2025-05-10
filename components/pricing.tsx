@@ -36,7 +36,7 @@ const PricingData = [
 
 export default function Pricing() {
   return (
-    <div className="max-w-md mx-auto p-6">
+    <div className="max-w-md mx-auto p-6 mb-6">
       <div className="text-center mb-8">
         <h3 className="text-blue-400 font-medium mb-1">Pricing Table</h3>
         <h2 className="text-navy-800 text-3xl font-bold leading-tight">

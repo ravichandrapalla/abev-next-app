@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 
 const Features = [
   {
@@ -48,28 +47,40 @@ const Features = [
 
 const FeaturesComponent = () => {
   return (
-    <div className="flex flex-col p-2 space-y-4 justify-center text-center bg-[#F3FEFF]">
-      <p className="">{Features[0].featureTitle}</p>
-      <p className="text-2xl font-bold">{Features[0].featureDescription}</p>
+    <div className="flex flex-col p-2 space-y-4 justify-center text-center bg-[#F3FEFF] mt-6 pt-12">
+      <div className="mb-10">
+        <p className="text-[#00B3CC] text-[13px] font-semibold tracking-wider mb-2">
+          {Features[0].featureTitle}
+        </p>
+        <p className="text-2xl font-bolder text-[#1D2B53] font-bold ">
+          {Features[0].featureDescription}
+        </p>
+      </div>
+
       {Features[0].cards.map((card) => {
         return (
           <div
+            data-aos="fade-up"
+            data-aos-duration="7000"
             key={card.cardTitle}
-            className="flex flex-col space-y-3 justify-start text-start border-1 border-gray-200 rounded-xl px-6 py-6"
+            className="flex flex-col space-y-3 justify-start text-start border-1 border-gray-200 rounded-md px-8 py-6 mb-12 group"
           >
-            <div className=" h-[60px] w-[60px] inline-flex items-center justify-center bg-white border-1 rounded-xl">
+            <div className="group-hover:bg-[#00B3CC] transition-colors duration-300 h-[60px] w-[60px] inline-flex items-center justify-center bg-white border-1 rounded-2xl  border-[#00B3CC]">
               <Image
                 src={card.cardImg}
                 alt="card-image"
-                height={20}
-                width={20}
+                height={27}
+                width={27}
                 className="text-[#00B3CC]"
-                color="#00B3CC"
               />
             </div>
 
-            <p className="text-[#1D2B53] font-bold">{card.cardTitle}</p>
-            <p className="text-[#616B7E]">{card.cardDescription}</p>
+            <p className="text-[#1D2B53] text-[17px] tracking-wide font-bold">
+              {card.cardTitle}
+            </p>
+            <p className="text-[#616B7E] text-[14px] font-medium">
+              {card.cardDescription}
+            </p>
           </div>
         );
       })}

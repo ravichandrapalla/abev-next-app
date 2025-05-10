@@ -79,12 +79,12 @@ const Header = () => {
       </nav>
       <div className="flex flex-1 items-center justify-end">
         <Button className="text-[10px] py-0 flex items-center h-7  bg-[#FF004D] hover:bg-blue-900 transition-colors duration-600 ease-in rounded-sm">
-          <span>Download now</span>
+          <span>Download Now</span>
           <div className="hidden">
             <ChevronRight />
           </div>
         </Button>
-        <div className="ml-4 md:hidden">
+        <div className="ml-2 md:hidden">
           <AlignJustify size={35} color="#333333" />
         </div>
       </div>
